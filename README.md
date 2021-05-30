@@ -16,6 +16,11 @@ me habria gustado darle mas cariño a la aplicación, pero no es mi tecnologia p
 
 https://brave-brown-cdb6cc.netlify.app/
 
+### Consumo de API
+
+API proporcionada por: EDAUAVPA
+
+https://grupal-github-repo-hackathon.herokuapp.com/
 ### Componentes de la aplicación.
 
 la aplicación comprende dos componentes con sus elementos, definidos en distintas carpetas.
