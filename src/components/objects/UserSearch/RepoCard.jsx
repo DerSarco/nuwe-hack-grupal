@@ -25,7 +25,7 @@ const RepoCard = ({ data }) => {
         {data.name}
       </Typography>
       <Typography variant="subtitle2" component="p" color='primary' >
-        {data.id}
+        {data.language}
       </Typography>
     </Paper>
   )
