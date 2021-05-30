@@ -2,7 +2,19 @@
 
 Este es el resultado de levantarse a las 3:30 am.
 
+<<<<<<< HEAD
 me habria gustado darle mas cariño a la aplicación, pero no es mi tecnologia principal.
+=======
+### EQUIPO
+
+Der Sarco#0256
+Eduardo Avalos#3557
+Schwager#4934
+Caro Castaño#2482
+
+las risas no faltaron
+###  Instalación
+>>>>>>> parent of 13c420e (Merge pull request #15 from sarcowww/revert-14-card)
 
 ### Instalación
 
@@ -19,9 +31,15 @@ me habria gustado darle mas cariño a la aplicación, pero no es mi tecnologia p
 
 API proporcionada por: EDAUAVPA
 
+<<<<<<< HEAD
 <https://grupal-github-repo-hackathon.herokuapp.com/>
 
 ### Componentes de la aplicación
+=======
+
+https://grupal-github-repo-hackathon.herokuapp.com/
+### Componentes de la aplicación.
+>>>>>>> parent of 13c420e (Merge pull request #15 from sarcowww/revert-14-card)
 
 la aplicación comprende dos componentes con sus elementos, definidos en distintas carpetas.
 

@@ -21,8 +21,7 @@ async function callApi(endpoint, body, type, includeHeaders = false) {
     headers: config
   })
     .then((x) => {
-      console.log(x.data);
-      return x.data;
+      return x;
     })
     .catch((error) => {
       let obj = {
@@ -52,22 +51,16 @@ const APIFetch = {
       }
       return data
     },
-    async addCreditCard(cardBody){
-      let data = await callApi('/api/card', cardBody, "POST", true);
+    async team(uri, addTeamBody) {
+      //metodo de registro sin route
+      let data = await callApi(uri, addTeamBody, "POST");
       if(data.error !== undefined){
         return data.messages;
       }
-      return data;
+      return data
     },
-    async getCard() {
-      let data = await callApi('/api/card/', null, "GET", true);
-      if(data.error !== undefined){
-        return data.messages;
-      }
-      return data;
-    },
-    read(url) {
-      return callApi(url);
+    read(url, token) {
+      return callApi(url, token, null, true);
     },
   },
 };
