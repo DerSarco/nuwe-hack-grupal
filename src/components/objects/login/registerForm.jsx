@@ -24,7 +24,7 @@ const RegisterForm = ({ handleRegister }) => {
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <div className="centeredFields">
-        <h1>Register</h1>
+        <h1 className="title">Register</h1>
         <TextField id="outlined-user" label="User" variant="outlined" />
         <TextField
           id="outlined-password"
