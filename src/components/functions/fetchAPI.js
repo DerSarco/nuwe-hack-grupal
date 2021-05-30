@@ -43,6 +43,13 @@ const APIFetch = {
       }
       return data
     },
+    async getTeams(){
+      let data = await callApi('/api/equipo',{},"GET")
+      if( data.error !== undefined){
+        return data.messages;
+      }
+      return data
+    },
     read(url) {
       return callApi(url);
     },
