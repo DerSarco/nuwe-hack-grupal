@@ -2,7 +2,7 @@ import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import React from "react";
 
-function AlertSnack({ msg, open, handleCloseAlert, severity = "error" }) {
+function AlertSnack({ msg, open, handleCloseAlert }) {
   function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
   }
@@ -16,7 +16,7 @@ function AlertSnack({ msg, open, handleCloseAlert, severity = "error" }) {
       onClose={handleCloseAlert}
       key={vertical + horizontal}
     >
-      <Alert onClose={handleCloseAlert} severity={severity}>
+      <Alert onClose={handleCloseAlert} severity="error">
         {msg}
       </Alert>
     </Snackbar>

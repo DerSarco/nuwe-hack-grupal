@@ -9,7 +9,7 @@ const checkToken = () => {
 };
 
 const returnToken = () => {
-  const token = localStorage.getItem("token");
+  const token = JSON.parse(localStorage.getItem("token"));
   console.log(token);
   if (!token) {
     return false;
