@@ -82,7 +82,7 @@ class LoginComponent extends React.Component {
       return;
     }
 
-    localStorage.setItem("token", result.token);
+    localStorage.setItem("token", result.data.token);
 
     this.goToPrincipal("Register Successful");
   };

@@ -18,8 +18,8 @@ export const TeamsProvider = (props) => {
     },
     getUsers: async (token) => {
       let result = await fetchAPI.API.read("/api/user", token);
-      if (users.length === 0) {
-        setUsers(result.data);
+      if (users.length === 0 && result.data) {
+        setUsers(result.data);  
       }
     },
   };

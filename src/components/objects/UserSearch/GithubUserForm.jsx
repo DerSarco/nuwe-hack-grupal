@@ -5,7 +5,6 @@ import {
   InputLabel,
   OutlinedInput,
 } from '@material-ui/core'
-import { Link } from 'react-router-dom'
 import SearchIcon from '@material-ui/icons/Search';
 import { makeStyles } from '@material-ui/core/styles'
 import { GithubUserContext } from '../../context/githubUserContext'
@@ -30,14 +29,6 @@ const GithubUserForm = () => {
   const { register, handleSubmit, errors} = useForm()
   const [ githubUser, controller ] = useContext(GithubUserContext)
 
-  // eslint-disable-next-line no-unused-vars
-  const [ state, setState ] = useState({
-    open: false,
-    alertMessage: "",
-    dataFilled: [],
-    repos: [],
-    loading: false,
-  })
   const classes = useStyles()
   const searchUser = dataForm => {
     const { user } = dataForm 

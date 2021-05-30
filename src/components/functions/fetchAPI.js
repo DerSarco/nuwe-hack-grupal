@@ -40,7 +40,7 @@ const APIFetch = {
       if(data.error !== undefined){
         return data.messages;
       }
-      let {token} = data;
+      let {token} = data.data;
       return token
     },
     async register(registerBody) {
@@ -51,24 +51,18 @@ const APIFetch = {
       }
       return data
     },
-    async addCreditCard(cardBody){
-      let data = await callApi('/api/card', cardBody, "POST", true);
-      if(data.error !== undefined){
+    async getTeams(){
+      let data = await callApi('/api/equipo',{},"GET")
+      if( data.error !== undefined){
         return data.messages;
-      }
-      return data;
-    },
-    async getCard() {
-      let data = await callApi('/api/card/', null, "GET", true);
-      if(data.error !== undefined){
-        return data.messages;
-      }
-      return data;
+          }
+      return data
     },
     async team(uri, addTeamBody) {
       //metodo de registro sin route
       let data = await callApi(uri, addTeamBody, "POST");
       if(data.error !== undefined){
+
         return data.messages;
       }
       return data
