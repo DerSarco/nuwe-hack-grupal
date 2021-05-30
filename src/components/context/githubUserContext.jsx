@@ -1,5 +1,5 @@
 import React, {useState , createContext} from 'react'
-import githubFetch from '../functions/fetch'
+import githubFetch from '../functions/fetchGithub'
 
 export const GithubUserContext = createContext()
 
