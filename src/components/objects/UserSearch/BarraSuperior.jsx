@@ -32,8 +32,7 @@ const BarraSuperior = ({ children }) => {
               aria-controls={'search-github-user'}
               aria-haspopup="true"
               onClick={()=>console.log('Apretaste el boton de cuenta, me falta agregar un menu acá :D')}
-              color="inherit"
-              fullWidth
+              color="inherit"              
             >
               <AccountCircleIcon />
             </IconButton>
