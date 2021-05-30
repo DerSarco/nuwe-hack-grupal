@@ -1,15 +1,30 @@
 import React from "react";
-import "./styles/LoginComponent.css";
-
+import "./styles/ControlPanelComponent.css";
+import AddTeamForm from '../formAddTeam/AddTeamForm'
 class ControlPanelComponent extends React.Component {
-  state = {
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: {something: 'something'},
+    };
+  }
   render() {
-    return(
+    return (
+   
       <div>
-        <h1>Hello</h1>
+        <div className="alignTitle">
+          <h1>Control Panel</h1>
+        </div>
+        <div className="columnsMenu">
+          <div className="centerForm">
+          <h3>Add team</h3>
+          <AddTeamForm/>
+          </div>
+          <div>H1</div>
+        </div>
       </div>
-    )
+  
+    );
   }
 }
 

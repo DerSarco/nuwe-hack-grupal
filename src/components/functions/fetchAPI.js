@@ -2,18 +2,26 @@ import axios from "axios";
 
 const BASE_URL = "https://grupal-github-repo-hackathon.herokuapp.com";
 
-async function callApi(endpoint, body, type) {
+async function callApi(endpoint, body, type, includeHeaders = false) {
+  let config = null;
+
   if (!type) {
     type = "GET";
   }
+
+  if (includeHeaders) {
+    config = { Authorization: `Bearer ${localStorage.getItem('token')}` };
+    
+  }
+
   let data = axios({
     method: type,
     url: BASE_URL + endpoint,
     data: body,
+    headers: config
   })
     .then((x) => {
-      console.log(x.data);
-      return x.data;
+      return x;
     })
     .catch((error) => {
       let obj = {
@@ -43,8 +51,16 @@ const APIFetch = {
       }
       return data
     },
-    read(url) {
-      return callApi(url);
+    async team(uri, addTeamBody) {
+      //metodo de registro sin route
+      let data = await callApi(uri, addTeamBody, "POST");
+      if(data.error !== undefined){
+        return data.messages;
+      }
+      return data
+    },
+    read(url, token) {
+      return callApi(url, token, null, true);
     },
   },
 };
