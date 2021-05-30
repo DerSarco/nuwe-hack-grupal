@@ -1,5 +1,4 @@
 import React from 'react'
-import GithubUserForm from './GithubUserForm'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import { 
   AppBar,
@@ -17,7 +16,7 @@ const useStyles = makeStyles( theme => ({
   },
 }))
 
-const BarraSuperior = () => {
+const BarraSuperior = ({ children }) => {
 
   const classes = useStyles()  
 
@@ -25,7 +24,7 @@ const BarraSuperior = () => {
     <div className={classes.grow}>
       <AppBar position="sticky">
         <Toolbar>
-          <GithubUserForm/>
+          { children }
           <div className={classes.grow} />
           <IconButton
               edge="end"
@@ -34,6 +33,7 @@ const BarraSuperior = () => {
               aria-haspopup="true"
               onClick={()=>console.log('Apretaste el boton de cuenta, me falta agregar un menu acá :D')}
               color="inherit"
+              fullWidth
             >
               <AccountCircleIcon />
             </IconButton>
