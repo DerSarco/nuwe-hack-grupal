@@ -1,5 +1,6 @@
 import React from 'react'
-import AccountCircleIcon from '@material-ui/icons/AccountCircle'
+import { Link } from 'react-router-dom'
+import SettingsIcon from '@material-ui/icons/Settings';
 import { 
   AppBar,
   IconButton,
@@ -26,16 +27,16 @@ const BarraSuperior = ({ children }) => {
         <Toolbar>
           { children }
           <div className={classes.grow} />
-          <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={'search-github-user'}
-              aria-haspopup="true"
-              onClick={()=>console.log('Apretaste el boton de cuenta, me falta agregar un menu acá :D')}
-              color="inherit"              
-            >
-              <AccountCircleIcon />
+          <Link to='/ControlPanel'>
+              <IconButton
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={'search-github-user'}
+                  aria-haspopup="true"              
+              >
+              <SettingsIcon />
             </IconButton>
+            </Link>
           </Toolbar>
       </AppBar>
     </div>
