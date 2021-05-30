@@ -5,9 +5,11 @@ import UserSearch from './pages/UserSearch';
 import ControlPanel from './pages/ControlPanel';
 import CreditCard from './pages/CreditCard';
 import NotFound from './pages/NotFound';
+import { GithubUserProvider } from './context/githubUserContext'
 
 function App(){
  return (
+    <GithubUserProvider>
      <BrowserRouter>
         <Switch>
             <Route exact path="/" component={Login}/>
@@ -17,6 +19,7 @@ function App(){
             <Route component={NotFound}/>
          </Switch>
      </BrowserRouter> 
+     </GithubUserProvider>
  )
 }
 export default App;
