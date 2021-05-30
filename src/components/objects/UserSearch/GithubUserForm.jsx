@@ -3,6 +3,7 @@ import {
   IconButton,
   TextField,
 } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 import SearchIcon from '@material-ui/icons/Search';
 import { makeStyles } from '@material-ui/core/styles'
 import { GithubUserContext } from '../../context/githubUserContext'
@@ -54,7 +55,9 @@ const GithubUserForm = () => {
   return(
     <form className={classes.root} onSubmit={handleSubmit(searchUser)}>
       <IconButton>
+      <Link to="/ControlPanel">
         <SearchIcon/>
+      </Link>
       </IconButton>
       <div className={classes.grow}>
         <TextField

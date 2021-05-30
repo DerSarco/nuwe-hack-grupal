@@ -34,7 +34,7 @@ export const GithubUserProvider = (props) => {
       }
       setUserData(userData)
       localStorage.setGithubUser(userData)
-    },
+    }
   }
   return (
     <GithubUserContext.Provider value={[ userData, controller ]}>

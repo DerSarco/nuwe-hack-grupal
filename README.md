@@ -2,7 +2,14 @@
 
 Este es el resultado de levantarse a las 3:30 am.
 
-me habria gustado darle mas cariño a la aplicación, pero no es mi tecnologia principal.
+### EQUIPO
+
+Der Sarco#0256
+Eduardo Avalos#3557
+Schwager#4934
+Caro Castaño#2482
+
+las risas no faltaron
 ###  Instalación
 
 
@@ -19,6 +26,7 @@ https://brave-brown-cdb6cc.netlify.app/
 ### Consumo de API
 
 API proporcionada por: EDAUAVPA
+
 
 https://grupal-github-repo-hackathon.herokuapp.com/
 ### Componentes de la aplicación.
