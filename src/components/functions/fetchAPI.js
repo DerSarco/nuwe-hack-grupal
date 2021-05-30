@@ -2,14 +2,23 @@ import axios from "axios";
 
 const BASE_URL = "https://grupal-github-repo-hackathon.herokuapp.com";
 
-async function callApi(endpoint, body, type) {
+async function callApi(endpoint, body, type, includeHeaders = false) {
+  let config = null;
+
   if (!type) {
     type = "GET";
   }
+
+  if (includeHeaders) {
+    config = { Authorization: `Bearer ${localStorage.getItem('token')}` };
+    
+  }
+
   let data = axios({
     method: type,
     url: BASE_URL + endpoint,
     data: body,
+    headers: config
   })
     .then((x) => {
       console.log(x.data);
@@ -42,6 +51,20 @@ const APIFetch = {
         return data.messages;
       }
       return data
+    },
+    async addCreditCard(cardBody){
+      let data = await callApi('/api/card', cardBody, "POST", true);
+      if(data.error !== undefined){
+        return data.messages;
+      }
+      return data;
+    },
+    async getCard() {
+      let data = await callApi('/api/card/', null, "GET", true);
+      if(data.error !== undefined){
+        return data.messages;
+      }
+      return data;
     },
     read(url) {
       return callApi(url);
