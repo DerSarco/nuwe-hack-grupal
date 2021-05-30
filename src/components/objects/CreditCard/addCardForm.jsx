@@ -34,7 +34,7 @@ const CardForm = ({handleRegisterCard}) => {
       credits
     }
 
-    console.log(card);
+    // console.log(card);
     handleRegisterCard(card);
   }
 
