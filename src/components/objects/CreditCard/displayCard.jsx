@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Visa from './images/visa.svg';
 import MasterCard from './images/MasterCard_early_1990s_logo.svg';
 import AmericanExpress from './images/american_express.svg';
