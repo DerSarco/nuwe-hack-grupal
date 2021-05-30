@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import {
   IconButton,
   TextField,
 } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search';
-import { fade, makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
+import { GithubUserContext } from '../../context/githubUserContext'
 import { useForm } from 'react-hook-form'
 
 const useStyles = makeStyles( theme => ({
@@ -23,29 +24,33 @@ const useStyles = makeStyles( theme => ({
 
 const GithubUserForm = () => {
   const { register, handleSubmit, errors} = useForm()
+  const [ githubUser, controller ] = useContext(GithubUserContext)
+  const [ state, setState ] = useState({
+    open: false,
+    alertMessage: "",
+    dataFilled: [],
+    repos: [],
+    loading: false,
+  })
   const classes = useStyles()
-   const searchUser = dataForm => console.log(dataForm)
-//   const searchUser = async dataForm => {
-//     if(user!== ''){
-
-//     }
-//   }
-// searchUser = async (user) => {
-//     if (user !== "") {
-//       try {
-//         this.setState({ ...this.state, loading: true });
-//         let dataFilled = await githubFetch.github.readUser(user);
-//         let repos = await githubFetch.github.read(dataFilled.repos_url);
-//         this.setState({ ...this.state, dataFilled, repos, loading: false });
-//       } catch (error) {
-//         this.cleanState();
-//         this.sendAlert("An error has ocurried.");
-//       }
-//       return;
-//     }
-//     this.sendAlert("Please add an user for the search");
-//   };
-
+  const searchUser = dataForm => {
+    const { user } = dataForm 
+    if( user && user !== githubUser.login){
+      setState( prevState => {
+        return({
+          ...prevState,
+          subbmitting: true,
+        })
+      })
+      controller.fetchUser(user)
+      setState( prevState => {
+        return({
+          ...prevState,
+          subbmitting: false,
+        })
+      })
+    }
+  }
   return(
     <form className={classes.root} onSubmit={handleSubmit(searchUser)}>
       <IconButton>
@@ -63,7 +68,7 @@ const GithubUserForm = () => {
         />
       </div>
     </form>
-)
+  )
 }
 
 export default GithubUserForm
