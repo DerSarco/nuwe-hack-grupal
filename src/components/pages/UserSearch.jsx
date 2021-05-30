@@ -1,13 +1,18 @@
 import React from 'react'
 import BarraSuperior from '../objects/UserSearch/BarraSuperior'
-import SearchForm from '../objects/UserSearch/SearchForm'
+import GithubUserForm from '../objects/UserSearch/GithubUserForm'
+import UsuarioSeleccionado from '../objects/UserSearch/UsuarioSeleccionado'
+import ReposUsuario from '../objects/UserSearch/ReposUsuario'
 
 
 const userSearch = props => {
     return (
         <>
-          <BarraSuperior/>
-          <SearchForm/>
+          <BarraSuperior>
+            <GithubUserForm/>
+          </BarraSuperior>
+          <UsuarioSeleccionado/>
+          <ReposUsuario/>
         </>
 
     )
