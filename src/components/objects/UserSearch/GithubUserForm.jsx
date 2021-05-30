@@ -31,20 +31,8 @@ const GithubUserForm = () => {
   const classes = useStyles()
   const searchUser = dataForm => {
     const { user } = dataForm 
-    if( user && !user.contains(' ') && user !== githubUser.login){
-      setState( prevState => {
-        return({
-          ...prevState,
-          subbmitting: true,
-        })
-      })
-      controller.fetchUser(user)
-      setState( prevState => {
-        return({
-          ...prevState,
-          subbmitting: false,
-        })
-      })
+    if( user && user !== githubUser.login){
+      controller.fetchUser(user)     
     }
   }
   return(
