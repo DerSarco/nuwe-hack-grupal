@@ -13,6 +13,9 @@ async function callApi(endpoint = {}) {
       readUser(user) {
         return callApi(`https://api.github.com/users/${user}`);
       },
+      getRepos(user) {
+        return callApi(`https://api.github.com/users/${user}/repos`)
+      },
       read(url) {
         return callApi(url);
       },

@@ -1,12 +1,15 @@
 import React from 'react'
+import BarraSuperior from '../objects/UserSearch/BarraSuperior'
 import SearchForm from '../objects/UserSearch/SearchForm'
+import { GithubUserProvider } from '../context/githubUserContext'
 
 const userSearch = props => {
     return (
-        <div>
-            <SearchForm/>
-        </div>
+        <GithubUserProvider>
+          <BarraSuperior/>
+          <SearchForm/>
+        </GithubUserProvider>
     )
-}
+};
 
-export default userSearch
+export default userSearch;
