@@ -4,10 +4,10 @@ Este es el resultado de levantarse a las 3:30 am.
 
 ### EQUIPO
 
-Der Sarco#0256
-Eduardo Avalos#3557
-Schwager#4934
-Caro Castaño#2482
+- Der Sarco#0256
+- Eduardo Avalos#3557
+- Schwager#4934
+- Caro Castaño#2482
 
 las risas no faltaron
 ###  Instalación
