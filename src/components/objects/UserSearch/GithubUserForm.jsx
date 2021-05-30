@@ -14,11 +14,11 @@ const useStyles = makeStyles( theme => ({
     borderRadius: theme.shape.borderRadius,
     margin:theme.spacing(2),
       [theme.breakpoints.up('sm')]: {
-      width: 'auto',
+      width: '100%',
     },
-    grow: {
-      flexGrow: 1,
-    }
+  },
+  grow: {
+    flexGrow: 1,
   },
 }))
 
@@ -56,7 +56,7 @@ const GithubUserForm = () => {
       <IconButton>
         <SearchIcon/>
       </IconButton>
-      <div className={classes.grow}>
+      <div className={classes.grow}/>
         <TextField
           error={errors?true:false}
           id="outlined-error-helper-text"
@@ -65,8 +65,8 @@ const GithubUserForm = () => {
           inputProps={{ ...register('user'), 'aria-label': 'search-user' }}
           variant="outlined"
           color= 'secondary'
+          fullWidth
         />
-      </div>
     </form>
   )
 }
