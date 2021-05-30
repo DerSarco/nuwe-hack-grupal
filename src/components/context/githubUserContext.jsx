@@ -5,7 +5,7 @@ export const GithubUserContext = createContext()
 
 export const GithubUserProvider = (props) => {
   const GITHUB_USER_KEY = 'githubUser'
-  const [ userData, setUserData] = useState({ })
+  const [ userData, setUserData] = useState(false)
 
   const localStorage = {
     getGithubUser: () => {
@@ -30,11 +30,12 @@ export const GithubUserProvider = (props) => {
       const userData = {
         avatar_url : data.avatar_url,
         login: data.login,
+        name: data.name,
         repos: repos,
       }
       setUserData(userData)
       localStorage.setGithubUser(userData)
-    },
+    }
   }
   return (
     <GithubUserContext.Provider value={[ userData, controller ]}>
