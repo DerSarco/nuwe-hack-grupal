@@ -1,0 +1,15 @@
+.centerForm {
+    height: 100vh; /* Magic here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .LinkNoDeco {
+    text-decoration: none;
+    color: white;
+  }
