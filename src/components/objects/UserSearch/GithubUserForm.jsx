@@ -26,6 +26,7 @@ const useStyles = makeStyles( theme => ({
 const GithubUserForm = () => {
   const { register, handleSubmit, errors} = useForm()
   const [ githubUser, controller ] = useContext(GithubUserContext)
+  // eslint-disable-next-line no-unused-vars
   const [ state, setState ] = useState({
     open: false,
     alertMessage: "",
