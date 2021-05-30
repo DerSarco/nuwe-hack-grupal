@@ -51,10 +51,18 @@ const APIFetch = {
       }
       return data
     },
+    async getTeams(){
+      let data = await callApi('/api/equipo',{},"GET")
+      if( data.error !== undefined){
+        return data.messages;
+          }
+      return data
+    },
     async team(uri, addTeamBody) {
       //metodo de registro sin route
       let data = await callApi(uri, addTeamBody, "POST");
       if(data.error !== undefined){
+
         return data.messages;
       }
       return data
