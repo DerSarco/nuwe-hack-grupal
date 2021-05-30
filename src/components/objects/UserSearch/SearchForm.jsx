@@ -1,7 +1,6 @@
 import React from "react";
 import AlertSnack from "../Snack/AlertSnack";
 import UserSearchInput from "./UserSearchInput";
-import { Redirect } from 'react-router-dom';
 import UserGrid from "./UserGrid";
 import UserCard from "./UserCard";
 import githubFetch from "../../functions/fetchGithub.js";
