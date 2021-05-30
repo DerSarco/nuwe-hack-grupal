@@ -40,7 +40,7 @@ const APIFetch = {
       if(data.error !== undefined){
         return data.messages;
       }
-      let {token} = data;
+      let {token} = data.data;
       return token
     },
     async register(registerBody) {
