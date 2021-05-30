@@ -1,19 +1,20 @@
 import React from "react";
-import {Redirect} from 'react-router-dom'
-import LoginComponent from "../objects/login/LoginComponent";
+
+import { Redirect } from "react-router-dom";
 import validateToken from "../functions/authValidation";
 import "./styles/UserSearch.css";
 
-const Login = (props) => {
+const userSearch = (props) => {
   return (
     <div>
       {validateToken.validate.verifyToken() ? (
-        <Redirect to="/userSearch"/>
+        <h1>TEST</h1>
       ) : (
-        <LoginComponent/>
+        <Redirect to="/"/>
+
       )}
     </div>
   );
 };
 
-export default Login;
+export default userSearch;

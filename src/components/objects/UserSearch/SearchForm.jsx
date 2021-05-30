@@ -1,9 +1,9 @@
 import React from "react";
-import AlertSnack from "./AlertSnack";
+import AlertSnack from "../Snack/AlertSnack";
 import UserSearchInput from "./UserSearchInput";
 import UserGrid from "./UserGrid";
 import UserCard from "./UserCard";
-import githubFetch from "../../functions/fetch.js";
+import githubFetch from "../../functions/fetchGithub.js";
 import CircularProgress from '@material-ui/core/CircularProgress';
 import "./styles/SearchForm.css";
 

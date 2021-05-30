@@ -4,11 +4,11 @@ import SearchForm from '../objects/UserSearch/SearchForm'
 
 const userSearch = props => {
     return (
-        <div style={{ heigth: '1000vh'}}>
+        <div>
           <BarraSuperior/>
           <SearchForm/>
         </div>
     )
-}
+};
 
-export default userSearch
+export default userSearch;
