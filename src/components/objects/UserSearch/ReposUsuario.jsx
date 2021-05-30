@@ -3,33 +3,34 @@ import {
   Box,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import UserCard from './UserCard'
+import RepoCard from './RepoCard'
 import { GithubUserContext } from '../../context/githubUserContext'
 
 const useStyles = makeStyles( theme => ({
   root: {
-    minHeight: '90vh',
-    display: 'flex',
+    minHeight: '80vh',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit,minmax(235px,1fr))',
+    columnGap: 30,
+    rowGap: 30,
     justifyContent: 'center',
     alignItems: 'center',
     padding: theme.spacing(6),
   },
 }))
 
-const UsuarioSeleccionado = () => {
+const ReposUsuario = () => {
 
   const classes = useStyles()
-  const usuario = useContext(GithubUserContext)[0]
+  const user = useContext(GithubUserContext)[0]
 
-
-
-  return(
+  return (
     <Box component='section' className={classes.root}>
-    { usuario && ( 
-      <UserCard data={usuario}/>
-    )}
+      {user?.repos && user.repos.map( repo => {
+        return <RepoCard key={`${repo.name}-${repo.id}`} data={repo} />
+      })}
     </Box>
-  )
+  ) 
 }
 
-export default UsuarioSeleccionado
+export default ReposUsuario

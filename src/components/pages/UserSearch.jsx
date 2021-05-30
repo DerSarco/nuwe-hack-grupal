@@ -1,8 +1,8 @@
 import React from 'react'
 import BarraSuperior from '../objects/UserSearch/BarraSuperior'
 import GithubUserForm from '../objects/UserSearch/GithubUserForm'
-import SearchForm from '../objects/UserSearch/SearchForm'
 import UsuarioSeleccionado from '../objects/UserSearch/UsuarioSeleccionado'
+import ReposUsuario from '../objects/UserSearch/ReposUsuario'
 
 
 const userSearch = props => {
@@ -12,7 +12,7 @@ const userSearch = props => {
             <GithubUserForm/>
           </BarraSuperior>
           <UsuarioSeleccionado/>
-          <SearchForm/>
+          <ReposUsuario/>
         </>
 
     )
