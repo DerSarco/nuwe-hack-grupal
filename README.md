@@ -14,8 +14,6 @@ me habria gustado darle mas cariño a la aplicación, pero no es mi tecnologia p
 las risas no faltaron
 ###  Instalación
 
-### Instalación
-
 - Clonar el repositorio
 - de preferencia iniciarlo con {yarn install}
 - una vez terminado, iniciar el app con {yarn start}
